@@ -52,6 +52,39 @@ Son sürüm kurulum paketini aşağıdaki bağlantıdan tek tıkla indirebilirsi
 
 ---
 
+## 🧠 Retrieval-based Voice Conversion (RVC) Nedir ve Ne İçin Kullanılır?
+
+### 1. RVC (Retrieval-based Voice Conversion) Nedir?
+**Retrieval-based Voice Conversion (RVC)**, derin öğrenme temelli en gelişmiş yapay zeka ses dönüştürme mimarisidir. Konuşmacının ses tonunu, boğaz rezonansını ve akustik özelliklerini alıp hedef bir kişinin veya karakterin ses tınısına dönüştürür. En büyük gücü; söylenen kelimeleri, artikülasyonu, duyguyu, tonlamayı ve konuşma hızını birebir koruyarak yalnızca ses kimliğini (timbre) değiştirmesidir.
+
+### 2. Neden "Retrieval-based" (Geri Getirme Tabanlı) Olarak Adlandırılır?
+Geleneksel yapay zeka ses dönüştürme modelleri yalnızca sinir ağı ağırlıklarına (neural network weights) dayanır. Bu durum uzun konuşmalarda veya yüksek perdelerde sesin bozulmasına, metalikleşmesine ya da robotikleşmesine yol açabilir.
+
+RVC'nin getirdiği devrimsel yenilik **Geri Getirme (Retrieval)** mekanizmasıdır:
+* Model eğitilirken, hedef sesin tüm akustik vektörleri bir **FAISS (Facebook AI Similarity Search)** indeks dosyasında (`.index`) toplanır.
+* Siz mikrofona konuştuğunuzda, sistem gerçek zamanlı olarak sesinizin fonetik özelliklerine en yakın hedef ses vektörlerini bu indeksten **"geri getirir" (retrieve eder)**.
+* Bu sayede ses yapay olarak üretilmek yerine doğrudan hedef kişinin gerçek ses veri setindeki en uygun tonlarla harmanlanır. Sonuç; pürüzsüz, çatallanmayan, insan kulağına tamamen doğal gelen bir sestir.
+
+### 3. RVC Nasıl Çalışır? (Teknik Mimari)
+RVC mimarisi 4 temel aşamada gerçek zamanlı ses dönüşümü gerçekleştirir:
+1. **İçerik Ayrıştırma (Feature Extraction):** `ContentVec` veya `HuBERT` modelleri kullanılarak mikrofondan gelen sesin tınısı silinir, sadece ne söylendiğini temsil eden saf fonetik içerik çıkarılır.
+2. **Perde Algılama (Pitch Extraction / F0):** `RMVPE`, `FCPE` veya `Harvest` algoritmalarıyla sesinizin melodisi (iniş ve çıkışları) anlık olarak yakalanır.
+3. **Vektör İndeks Eşleme (Feature Retrieval):** Çıkarılan fonetik özellikler `.index` dosyasındaki hedef konuşmacı vektörleriyle en yüksek benzerliğe göre eşleştirilir.
+4. **Nöral Ses Sentezi (VITS / HiFi-GAN):** Hedef konuşmacının ağırlıkları ve geri getirilen indeks verileri birleştirilerek ultra düşük gecikmeyle (GPU desteğiyle ~100-150ms) hedef seste konuşma olarak dışarı aktarılır.
+
+### 4. RVC Ne İçin ve Nerelerde Kullanılır?
+* **Oyunlar ve Sesli Sohbet:** Discord, TeamSpeak, CS2, Valorant, GTA V / FiveM ve roleplay (RP) sunucularında dilediğiniz oyun karakteri veya kişi olarak gerçek zamanlı konuşmak için.
+* **Canlı Yayınlar ve İçerik Üretimi:** Twitch, YouTube veya TikTok canlı yayınlarında izleyicilere eğlenceli ve interaktif ses performansları sunmak için.
+* **Görme Engelliler İçin Erişilebilir İletişim:** Standart programların görsel karmaşasından bağımsız olarak, %100 NVDA desteğiyle görme engelli bireylerin kendi seslerini diledikleri gibi özelleştirebilmesi için.
+* **Gizlilik ve Anonimlik:** Çevrim içi ortamlarda kendi gerçek sesini ve kimliğini paylaşmak istemeyen kullanıcılar için tam akustik koruma sağlamak amacıyla.
+* **Müzik ve Şarkı Sentezi (AI Cover):** Herhangi bir ses kaydını veya vokali başka sanatçıların ses modelleriyle yeniden seslendirmek için.
+
+### 5. Geleneksel Ses Değiştiricilerden (Clownfish, Voicemod vb.) Farkı Nedir?
+* **Geleneksel Filtreler:** Ses dalgasının frekansını basitçe yukarı veya aşağı kaydırır (pitch shift). Sonuçta ortaya çıkan ses "sincap" (helyum gazı çekmiş gibi) veya mekanik "robot" sesinden öteye gidemez. Boğaz yapısını ve insan sesinin doğallığını taklit edemez.
+* **RVC Yapay Zeka Dönüşümü:** Frekansı sadece kaydırmakla kalmaz; ses tellerinin titreşimini, ağız-boğaz rezonans boşluğunu (formant) ve konuşmacının kendine has tınısını baştan aşağı hedef sesin karakteristiğine göre yeniden modeller. Böylece karşınızdaki kişi bir filtre değil, gerçekten o kişinin konuştuğunu duyar.
+
+---
+
 ## 💻 Sistem Gereksinimleri
 
 | Bileşen | Minimum | Önerilen |
