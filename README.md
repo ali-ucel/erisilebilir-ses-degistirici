@@ -15,7 +15,7 @@ Diğer karmaşık, ekran okuyucularla okunamayan ses değiştiricilerin aksine; 
 
 Son sürüm kurulum paketini aşağıdaki bağlantıdan tek tıkla indirebilirsiniz:
 
-👉 **[Erişilebilir_Ses_Değiştirici_installer.exe İndir (v1.0.0)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_installer.exe)**  
+👉 **[Erisilebilir_Ses_Degistirici_installer.exe İndir (v1.0.0)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_installer.exe)**  
 *(Dosya Boyutu: ~184 MB | 64-bit Windows Destekli)*
 
 ---
@@ -100,7 +100,7 @@ RVC mimarisi 4 temel aşamada gerçek zamanlı ses dönüşümü gerçekleştiri
 
 ## 🛠️ Kurulum ve Başlangıç
 
-1. **[Erişilebilir_Ses_Değiştirici_installer.exe](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_installer.exe)** dosyasını indirin.
+1. **[Erisilebilir_Ses_Degistirici_installer.exe](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_installer.exe)** dosyasını indirin.
 2. Kurulum sihirbazını çalıştırın ve ekrandaki adımları takip edin.
 3. Kurulum tamamlandığında masaüstünüzde oluşan **"Erişilebilir Ses Değiştirici"** kısayoluna basın.
 4. Açılan arayüzde:
