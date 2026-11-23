@@ -121,7 +121,11 @@ RVC mimarisi 4 temel aşamada gerçek zamanlı ses dönüşümü gerçekleştiri
 *C: Evet, arayüzdeki "Kendi Sesimi Duy" onay kutusunu işaretlediğinizde dönüştürülen ses anlık olarak kulaklığınıza da gelir.*
 
 **S: Ekran kartım AMD veya Intel, programı kullanabilir miyim?**  
-*C: Evet, uygulama NVIDIA ekran kartı olmadığında otomatik olarak optimize edilmiş CPU moduna geçer.*
+*C: Evet, uygulama NVIDIA ekran kartı (CUDA) tespit edemezse otomatik olarak optimize edilmiş CPU moduna geçer. Ancak beklentinizi çok yüksek tutmamanızda fayda var:*
+* *RVC yapay zeka mimarisi gerçek zamanlı ses dönüştürürken saniyede binlerce yoğun tensör ve matris işlemi hesaplar. Ekran kartlarındaki binlerce özel Tensor/CUDA çekirdeği yerine işlemcinin (CPU) sınırlı çekirdekleri devreye girdiğinde hesaplama süresi doğal olarak uzar.*
+* *Bu durum; ses gecikmesinin (latency) artmasına (500ms - 1 saniye veya üzeri), seste anlık takılmalara, çıtırtılara ya da robotik kırılmalara yol açabilir.*
+* *Ayrıca işlemci kullanımınız tavan yapabilir; arka planda oyun veya ağır programlar açıksa sistemde belirgin kasılmalar yaşanabilir.*
+* *Özetle: Çok çekirdekli güçlü bir işlemciniz varsa temel denemeler ve sohbet için kullanılabilir; ancak oyunlarda ve canlı yayınlarda sıfır gecikmeli, akıcı ve berrak bir deneyim için NVIDIA RTX/GTX ekran kartı kesinlikle tavsiye edilir.*
 
 ---
 
