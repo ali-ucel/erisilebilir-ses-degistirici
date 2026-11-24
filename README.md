@@ -1,6 +1,6 @@
 # Erişilebilir Ses Değiştirici (Accessible Voice Changer)
 
-![Sürüm](https://img.shields.io/badge/S%C3%BCr%C3%BCm-v1.0.0-blue.svg)
+![Sürüm](https://img.shields.io/badge/S%C3%BCr%C3%BCm-v1.0.1-blue.svg)
 ![NVDA](https://img.shields.io/badge/Eri%C5%9Fibillik-NVDA%20%25100-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011%20(64--bit)-lightgrey.svg)
 ![Lisans](https://img.shields.io/badge/Lisans-%C3%96zel%20(T%C3%BCm%20Haklar%C4%B1%20Sakl%C4%B1d%C4%B1r)-orange.svg)
@@ -15,7 +15,7 @@ Diğer karmaşık, ekran okuyucularla okunamayan ses değiştiricilerin aksine; 
 
 Son sürüm kurulum paketini aşağıdaki bağlantıdan tek tıkla indirebilirsiniz:
 
-👉 **[Erişilebilir Ses Değiştirici Kurulumu (v1.0.0 İndir)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
+👉 **[Erişilebilir Ses Değiştirici Kurulumu (v1.0.1 İndir)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
 *(Dosya Boyutu: ~201 MB | 64-bit Windows Destekli)*
 
 ---
@@ -41,6 +41,16 @@ Son sürüm kurulum paketini aşağıdaki bağlantıdan tek tıkla indirebilirsi
   * Uygulama içinden kendi ses veri setinizi (klasör veya tek ses dosyası) seçerek kendi RVC yapay zeka modelinizi eğitebilme.
   * Epoch ve adım ayarları için rehber bilgi kutuları.
   * Eğitilen modelleri otomatik olarak sisteme ekleme ve kullanıma sunma.
+
+* **✂️ Şarkı ve Ses Efekti Ayırıcı (Demucs AI Entegrasyonu):**
+  * Model eğitimi sihirbazında dosya seçildiğinde arka plan ses efektlerini, enstrümanları ve müziği temizleme seçeneği.
+  * NVIDIA GPU / CPU destekli Demucs yapay zeka modeliyle saniyeler içinde temiz vokal ayrıştırma.
+  * Ayırma sonrası tam erişilebilir **Önizleme Penceresi**: Temiz vokali dinleme, ayrılan efektleri dinleme ve tek tıkla model eğitimi aşamasına aktarma.
+  * Ana ekranda ve Ayarlar menüsünde doğrudan bağımsız "Şarkı / Efekt Ayırıcı" aracı.
+
+* **🧹 Güvenli Kurulum ve Eski Sürüm Temizliği:**
+  * Kurulum sihirbazı sistemde önceki bir sürüm tespit ettiğinde kullanıcıya açık onay sorar.
+  * Onay verildiğinde eski sürüm kodları ve çakışabilecek dosyalar temizlenir; kullanıcının kendi eğittiği ses modelleri (`models`, `weights`, `logs`) ve ayarları güvenle korunur.
 
 * **☁️ HuggingFace Model Kütüphanesi:**
   * Yüzlerce hazır Türkçe ve yabancı ses modelini uygulama içinden arama.
