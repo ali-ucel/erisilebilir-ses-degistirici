@@ -1,10 +1,5 @@
 # Erişilebilir Ses Değiştirici (Accessible Voice Changer)
 
-![Sürüm](https://img.shields.io/badge/S%C3%BCr%C3%BCm-v1.0.1-blue.svg)
-![NVDA](https://img.shields.io/badge/Eri%C5%9Fibillik-NVDA%20%25100-brightgreen.svg)
-![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011%20(64--bit)-lightgrey.svg)
-![Lisans](https://img.shields.io/badge/Lisans-%C3%96zel%20(T%C3%BCm%20Haklar%C4%B1%20Sakl%C4%B1d%C4%B1r)-orange.svg)
-
 **Erişilebilir Ses Değiştirici**, görme engelli bireyler başta olmak üzere tüm kullanıcılar için tasarlanmış, **%100 NVDA ve ekran okuyucu uyumlu**, yapay zeka (RVC v2) destekli gerçek zamanlı bir ses dönüştürme yazılımıdır.
 
 Diğer karmaşık, ekran okuyucularla okunamayan ses değiştiricilerin aksine; tüm menüler, ses ayarları, model seçimleri ve eğitim araçları tamamen klavye ve ekran okuyucu dostu olarak geliştirilmiştir.
