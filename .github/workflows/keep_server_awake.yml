@@ -1,5 +1,5 @@
 name: Keep Auth Server Awake
-    
+
 on:
   schedule:
     - cron: '*/10 * * * *'
@@ -11,5 +11,4 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Ping Render auth server
-        run: |
-        curl -fsS --max-time 45 "https://voicechanger-server.onrender.com/api/ping"                      
+        run: curl -fsS --max-time 45 "https://voicechanger-server.onrender.com/api/ping"
