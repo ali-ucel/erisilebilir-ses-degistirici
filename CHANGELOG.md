@@ -1,5 +1,9 @@
 # Değişiklik Günlüğü / Changelog
 
+## v1.0.3 (2026-11-26)
+- **Sunucu Bağlantısı & Kayıt/Giriş İyileştirmesi:** Bulut sunucusu uykudan uyanırken (`cold start`) yaşanan `3.5s`/`5s` zaman aşımı hatası giderildi; sunucu keşfi (`25s`), kayıt/giriş (`30s`) ve token doğrulama (`15s`) süreleri artırıldı.
+- **Varsayılan Adres Temizliği:** Eski tünel varsayılanı kaldırılıp `https://voicechanger-server.onrender.com` doğrudan standart hale getirildi ve 7/24 uyanık kalma zamanlayıcısı (keep-alive) eklendi.
+
 ## v1.0.2 (2026-11-26)
 - **25 Dil Desteği / 25 UI Languages:** `tr`, `en`, `de`, `fr`, `es`, `it`, `pt`, `ru`, `ar`, `ja`, `ko`, `zh-CN`, `zh-TW`, `sv`, `no`, `da`, `fi`, `hu`, `bg`, `el`, `hi`, `vi`, `az`, `kk`, `uz`.
 - **Otomatik Dil Algılama:** İlk açılışta Windows arayüz dilini otomatik algılar; desteklenmeyen sistem dillerinde İngilizce ile açılır. Ayarlar menüsünden dil değiştirilebilir.

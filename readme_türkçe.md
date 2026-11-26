@@ -1,6 +1,6 @@
 > 🌐 **[English Documentation (`readme_en.md`)](readme_en.md)** &nbsp;|&nbsp; 🏠 **[Ana Sayfa (`README.md`)](README.md)** &nbsp;|&nbsp; 🌍 **[Web Sitesi](https://ali-ucel.github.io/erisilebilir-ses-degistirici/)**
 
-# Erişilebilir Ses Değiştirici (v1.0.2)
+# Erişilebilir Ses Değiştirici (v1.0.3)
 
 ![Accessible Voice Changer - NVDA Compatible AI Voice Converter](docs/assets/og-preview.jpg)
 
@@ -14,12 +14,12 @@ Diğer karmaşık, ekran okuyucularla okunamayan ses değiştiricilerin aksine; 
 
 Son sürüm kurulum paketini aşağıdaki bağlantıdan tek tıkla indirebilirsiniz:
 
-👉 **[Erişilebilir Ses Değiştirici Kurulumu (v1.0.2 İndir)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
+👉 **[Erişilebilir Ses Değiştirici Kurulumu (v1.0.3 İndir)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
 *(Dosya Boyutu: ~203 MB | 64-bit Windows Destekli)*
 
 ---
 
-## ✨ v1.0.2 ve Öne Çıkan Özellikler
+## ✨ v1.0.3 ve Öne Çıkan Özellikler
 
 * **🌍 25 Dilde Uygulama Arayüzü ve 18 Dilli Kurulum Sihirbazı (Yeni!):**
   * Uygulama ilk açılışta Windows arayüz dilini otomatik algılar; desteklenen 25 dil dışında bir dil kullanılıyorsa otomatik olarak İngilizce ile açılır.

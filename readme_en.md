@@ -1,6 +1,6 @@
 > 🌐 **[Türkçe Dokümantasyon (`readme_türkçe.md`)](readme_türkçe.md)** &nbsp;|&nbsp; 🏠 **[Home (`README.md`)](README.md)** &nbsp;|&nbsp; 🌍 **[Live Website](https://ali-ucel.github.io/erisilebilir-ses-degistirici/)**
 
-# Accessible Voice Changer (v1.0.2)
+# Accessible Voice Changer (v1.0.3)
 
 ![Accessible Voice Changer - NVDA Compatible AI Voice Converter](docs/assets/og-preview.jpg)
 
@@ -15,7 +15,7 @@ Unlike typical voice changers with inaccessible interfaces, every menu, voice ch
 
 Download the latest installer package directly:
 
-👉 **[Accessible Voice Changer Setup (Download v1.0.2)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
+👉 **[Accessible Voice Changer Setup (Download v1.0.3)](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
 *(File Size: ~203 MB | 64-bit Windows 10/11)*
 
 ---

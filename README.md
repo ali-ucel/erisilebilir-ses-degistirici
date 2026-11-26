@@ -10,9 +10,9 @@
 
 ---
 
-## 🚀 Son Sürüm İndirme / Latest Release Download (v1.0.2)
+## 🚀 Son Sürüm İndirme / Latest Release Download (v1.0.3)
 
-👉 **[Erişilebilir Ses Değiştirici Kurulumu v1.0.2 İndir / Download Installer](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
+👉 **[Erişilebilir Ses Değiştirici Kurulumu v1.0.3 İndir / Download Installer](https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe)**  
 *(~203 MB | 64-bit Windows 10/11 | 18 Dilli Kurulum Sihirbazı & 25 Dilli Uygulama Arayüzü)*
 
 ---
