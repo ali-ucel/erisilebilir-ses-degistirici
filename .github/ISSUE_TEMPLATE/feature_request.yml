@@ -1,0 +1,17 @@
+name: Özellik veya Model İsteği / Feature or Model Request
+description: Yeni bir özellik, dil düzeltmesi veya erişilebilirlik iyileştirmesi önerin.
+title: "[İstek/Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Öneriniz / Your Suggestion
+      description: Ne eklenmesini veya geliştirilmesini istersiniz?
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility_notes
+    attributes:
+      label: Erişilebilirlik Notları / Accessibility Notes
+      description: Klavye kısayolu veya ekran okuyucu anonsu öneriniz varsa paylaşın.

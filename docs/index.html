@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erişilebilir Ses Değiştirici | Accessible Voice Changer (NVDA Compatible RVC AI)</title>
+  <meta name="description" content="Erişilebilir Ses Değiştirici (Accessible Voice Changer): 25 dilde, %100 NVDA ve ekran okuyucu uyumlu gerçek zamanlı RVC v2 yapay zeka ses dönüştürücü, model eğitim sihirbazı ve Demucs şarkı ayırıcı.">
+  <meta name="keywords" content="NVDA voice changer, accessible voice changer, erişilebilir ses değiştirici, RVC voice conversion, görme engelli ses değiştirici, screen reader AI voice, Demucs vocal separator, Ali Ücel">
+  <meta name="author" content="Ali Ücel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ali-ucel.github.io/erisilebilir-ses-degistirici/">
+
+  <!-- OpenGraph / Discord / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Accessible Voice Changer">
+  <meta property="og:title" content="Erişilebilir Ses Değiştirici | Accessible Voice Changer v1.0.2">
+  <meta property="og:description" content="100% NVDA & Screen Reader Compatible Real-Time RVC v2 AI Voice Converter, Model Training Wizard & Demucs Separator in 25 Languages.">
+  <meta property="og:url" content="https://ali-ucel.github.io/erisilebilir-ses-degistirici/">
+  <meta property="og:image" content="https://ali-ucel.github.io/erisilebilir-ses-degistirici/assets/og-preview.jpg">
+  <meta property="og:image:alt" content="Accessible Voice Changer - NVDA Compatible AI Voice Converter">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Accessible Voice Changer v1.0.2 (NVDA Compatible AI Voice Converter)">
+  <meta name="twitter:description" content="Real-time RVC AI voice converter with 100% keyboard & NVDA accessibility, 25 UI languages, model training wizard, and Demucs separator.">
+  <meta name="twitter:image" content="https://ali-ucel.github.io/erisilebilir-ses-degistirici/assets/og-preview.jpg">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Erişilebilir Ses Değiştirici (Accessible Voice Changer)",
+    "alternateName": "Accessible Voice Changer",
+    "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+    "applicationCategory": "MultimediaApplication",
+    "softwareVersion": "1.0.2",
+    "url": "https://ali-ucel.github.io/erisilebilir-ses-degistirici/",
+    "downloadUrl": "https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe",
+    "image": "https://ali-ucel.github.io/erisilebilir-ses-degistirici/assets/og-preview.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ali Ücel",
+      "email": "aliucel2011@gmail.com",
+      "url": "https://github.com/ali-ucel"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "accessibilityFeature": [
+      "screenReaderSupport",
+      "fullKeyboardControl",
+      "highContrastDisplay"
+    ],
+    "inLanguage": ["tr", "en", "de", "fr", "es", "it", "pt", "ru", "ar", "ja", "ko", "zh-CN", "zh-TW", "sv", "no", "da", "fi", "hu", "bg", "el", "hi", "vi", "az", "kk", "uz"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #070b16;
+      --surface: #0f172a;
+      --surface-alt: #162038;
+      --border: #2a3a5e;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-strong: #0ea5e9;
+      --accent-text: #04121f;
+      --focus: #fde047;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 1.05rem;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { color: #7dd3fc; }
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--focus);
+      color: #000;
+      font-weight: 700;
+      padding: 0.75rem 1.25rem;
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .lang-group {
+      display: inline-flex;
+      gap: 0.4rem;
+    }
+    .lang-btn {
+      background: var(--surface-alt);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .lang-btn[aria-pressed="true"] {
+      background: var(--accent);
+      color: var(--accent-text);
+      border-color: var(--accent);
+    }
+    .hero {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+    h1 {
+      font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+      line-height: 1.2;
+      margin: 0 0 1rem;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--surface-alt);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.12rem;
+      margin: 0 0 1.5rem;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.35rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-text);
+    }
+    .btn-primary:hover {
+      background: #7dd3fc;
+      color: var(--accent-text);
+    }
+    .btn-secondary {
+      background: var(--surface-alt);
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+    section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.65rem;
+      margin: 0 0 1.25rem;
+      color: #ffffff;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.1rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.12rem;
+      color: var(--accent);
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background: var(--surface-alt);
+      color: #ffffff;
+    }
+    kbd {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.15rem 0.45rem;
+      font-family: Consolas, monospace;
+      color: var(--focus);
+    }
+    footer {
+      padding: 2rem 0 2.5rem;
+      background: var(--surface);
+      color: var(--muted);
+    }
+    .meta-note {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" id="skip-link">Ana içeriğe atla</a>
+
+  <header>
+    <div class="container nav-bar">
+      <a class="brand" href="#main-content" id="brand-name">Erişilebilir Ses Değiştirici</a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#features" id="nav-features">Özellikler</a></li>
+          <li><a href="#shortcuts" id="nav-shortcuts">Kısayollar</a></li>
+          <li><a href="#setup" id="nav-setup">Kurulum</a></li>
+          <li><a href="https://github.com/ali-ucel/erisilebilir-ses-degistirici" id="nav-github">GitHub</a></li>
+          <li>
+            <div class="lang-group" role="group" aria-label="Language selection">
+              <button type="button" class="lang-btn" id="btn-tr" aria-pressed="true" onclick="setLang('tr')">Türkçe</button>
+              <button type="button" class="lang-btn" id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="live-status" class="sr-only" aria-live="polite"></div>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge" id="hero-badge">v1.0.2 • %100 NVDA Uyumlu • 25 Dil</span>
+          <h1 id="hero-title">Erişilebilir Ses Değiştirici (RVC AI)</h1>
+          <p class="lead" id="hero-lead">
+            Görme engelli bireyler başta olmak üzere tüm kullanıcılar için sıfırdan tasarlanmış; tam klavye ve ekran okuyucu (NVDA) uyumlu, gerçek zamanlı yapay zeka ses dönüştürücü, model eğitim sihirbazı ve Demucs şarkı ayırıcı.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/ali-ucel/erisilebilir-ses-degistirici/releases/latest/download/Erisilebilir_Ses_Degistirici_Kurulumu.exe" id="btn-download">v1.0.2 Kurulumu İndir (~203 MB)</a>
+            <a class="btn btn-secondary" href="https://github.com/ali-ucel/erisilebilir-ses-degistirici" id="btn-repo">GitHub Deposu</a>
+            <a class="btn btn-secondary" href="https://github.com/ali-ucel/erisilebilir-ses-degistirici/discussions" id="btn-discuss">Topluluk / Tartışmalar</a>
+          </div>
+          <p class="meta-note" id="hero-meta">Geliştirici: Ali Ücel • Windows 10 / 11 (64-bit) • NVIDIA CUDA &amp; CPU Destekli</p>
+        </div>
+        <div>
+          <img class="hero-img" src="assets/og-preview.jpg" width="1280" height="720" alt="Accessible Voice Changer - NVDA Compatible AI Voice Converter">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading">Öne Çıkan Özellikler</h2>
+        <div class="cards" id="features-cards"></div>
+      </div>
+    </section>
+
+    <section id="shortcuts" aria-labelledby="shortcuts-heading">
+      <div class="container">
+        <h2 id="shortcuts-heading">Klavye Kısayolları</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" id="th-key">Tuş</th>
+              <th scope="col" id="th-action">İşlev</th>
+            </tr>
+          </thead>
+          <tbody id="shortcuts-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="setup" aria-labelledby="setup-heading">
+      <div class="container">
+        <h2 id="setup-heading">Hızlı Kurulum ve Başlangıç</h2>
+        <ol id="setup-steps"></ol>
+        <p id="docs-links"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p id="footer-copy">Geliştirici: Ali Ücel • İletişim: <a href="mailto:aliucel2011@gmail.com">aliucel2011@gmail.com</a> • <a href="https://github.com/ali-ucel">github.com/ali-ucel</a></p>
+      <p class="meta-note" id="footer-disclaimer">Yapay zeka ses modelleriyle üretilen seslerin kullanım sorumluluğu tamamen kullanıcıya aittir.</p>
+    </div>
+  </footer>
+
+  <script>
+    const I18N = {
+      tr: {
+        skip: "Ana içeriğe atla",
+        brand: "Erişilebilir Ses Değiştirici",
+        navFeatures: "Özellikler",
+        navShortcuts: "Kısayollar",
+        navSetup: "Kurulum",
+        navGithub: "GitHub",
+        badge: "v1.0.2 • %100 NVDA Uyumlu • 25 Dil",
+        title: "Erişilebilir Ses Değiştirici (RVC AI)",
+        lead: "Görme engelli bireyler başta olmak üzere tüm kullanıcılar için sıfırdan tasarlanmış; tam klavye ve ekran okuyucu (NVDA) uyumlu, gerçek zamanlı yapay zeka ses dönüştürücü, model eğitim sihirbazı ve Demucs şarkı ayırıcı.",
+        download: "v1.0.2 Kurulumu İndir (~203 MB)",
+        repo: "GitHub Deposu",
+        discuss: "Topluluk / Tartışmalar",
+        meta: "Geliştirici: Ali Ücel • Windows 10 / 11 (64-bit) • NVIDIA CUDA & CPU Destekli",
+        featuresHeading: "Öne Çıkan Özellikler",
+        features: [
+          ["25 Dil ve Otomatik Algılama", "İlk açılışta Windows dilinizi otomatik algılar; desteklenmeyen sistem dillerinde İngilizce ile açılır. Ayarlar menüsünden dil anında değiştirilebilir. Kurulum sihirbazı da 18 dilde NVDA sesli yönlendirme sunar."],
+          ["Canlı Mikrofon Dönüşümü", "RVC v2 mimarisiyle düşük gecikmeli gerçek zamanlı ses dönüştürme, Virtual Audio Cable (Line 1) ve kulaklık izleme desteği."],
+          ["Ses Karakter Ayarları", "Kazanç, ses seviyesi, perde (pitch) ve milimetrik formant ince ayarıyla doğal ton uyarlaması."],
+          ["690+ Açık Kaynak Model Havuzu", "690'dan fazla AILabTürkiye ve popüler RVC ses modeline uygulama içinden anında erişim ve tek tıkla indirme."],
+          ["Tek ve Toplu Model Eğitimi + TTS", "Kendi ses kayıtlarınızdan adım adım model eğitimi (her 10 epoch'ta otomatik kayıt), en fazla 3 modelli toplu eğitim ve Metinden Sese (TTS) iletişim kutusu."],
+          ["Şarkı ve Ses Efekti Ayırıcı (Demucs)", "Eğitim sihirbazında veya bağımsız pencerede vokal ve arka plan seslerini temizce ayırıp erişilebilir önizleme ile dinleme."]
+        ],
+        shortcutsHeading: "Klavye Kısayolları",
+        thKey: "Tuş",
+        thAction: "İşlev",
+        shortcuts: [
+          ["F1", "Yardım ve Kullanım Rehberi"],
+          ["F2", "Bilgisayardan Ses Modeli Ekle"],
+          ["F3", "Yapay Zeka Ses Modeli Eğitim Sihirbazı (Tek / Toplu)"],
+          ["F5", "Canlı Ses Dönüştürmeyi Başlat / Durdur"],
+          ["F6", "Ses Test Kaydı Al"],
+          ["F7", "Çıktı Ses Kaydını Başlat / Durdur"]
+        ],
+        setupHeading: "Hızlı Kurulum ve Başlangıç",
+        setupSteps: [
+          "Yukarıdaki v1.0.2 Kurulumu İndir düğmesiyle Erişilebilir Ses Değiştirici kurulum paketini indirin.",
+          "Kurulum sihirbazını çalıştırıp açılışta dilinizi seçin; NVDA sesli yönlendirmesiyle kurulumu tamamlayın.",
+          "Masaüstündeki Erişilebilir Ses Değiştirici (NVDA) kısayolunu açın.",
+          "Mikrofonunuzu, çıkış aygıtı olarak Line 1 (Virtual Audio Cable) ve bir ses modeli seçip F5 tuşuyla canlı dönüşümü başlatın."
+        ],
+        docsLinks: 'Detaylı rehberler: <a href="https://github.com/ali-ucel/erisilebilir-ses-degistirici/blob/main/readme_t%C3%BCrk%C3%A7e.md">readme_türkçe.md</a> | <a href="https://github.com/ali-ucel/erisilebilir-ses-degistirici/blob/main/readme_en.md">readme_en.md</a>',
+        disclaimer: "Yapay zeka ses modelleriyle üretilen seslerin kullanım sorumluluğu tamamen kullanıcıya aittir.",
+        announced: "Sayfa dili Türkçe olarak güncellendi."
+      },
+      en: {
+        skip: "Skip to main content",
+        brand: "Accessible Voice Changer",
+        navFeatures: "Features",
+        navShortcuts: "Shortcuts",
+        navSetup: "Quick Start",
+        navGithub: "GitHub",
+        badge: "v1.0.2 • 100% NVDA Compatible • 25 Languages",
+        title: "Accessible Voice Changer (RVC AI)",
+        lead: "An RVC (Retrieval-based Voice Conversion) real-time AI voice converter built from the ground up with full keyboard navigation and NVDA screen reader accessibility for blind and visually impaired users.",
+        download: "Download v1.0.2 Setup (~203 MB)",
+        repo: "GitHub Repository",
+        discuss: "Community Discussions",
+        meta: "Developer: Ali Ücel • Windows 10 / 11 (64-bit) • NVIDIA CUDA & CPU Supported",
+        featuresHeading: "Key Features",
+        features: [
+          ["25 Languages & Auto-Detection", "Automatically detects your Windows display language on first launch (falling back cleanly to English). Switch languages anytime in Settings. Includes an 18-language Inno Setup wizard with NVDA speech guidance."],
+          ["Live Microphone Conversion", "Low-latency real-time voice alteration with Virtual Audio Cable (Line 1) and headphone monitoring support."],
+          ["Voice Character Settings", "Gain, volume, pitch, and millimeter-level formant fine-tuning for natural vocal transformation."],
+          ["Open Source Model Pool (690+)", "Instant access and one-click download to over 690 AILabTürkiye and popular RVC voice models inside the app."],
+          ["Single & Batch Training + TTS", "Step-by-step AI voice training (auto-saving every 10 epochs), Batch Training (up to 3 models), and an accessible Text-to-Speech dialog."],
+          ["Song & Sound Effect Separator (Demucs)", "Separate clean vocals from music and effects inside the training flow or standalone, with an accessible preview window."]
+        ],
+        shortcutsHeading: "Keyboard Shortcuts",
+        thKey: "Key",
+        thAction: "Action",
+        shortcuts: [
+          ["F1", "Help & User Guide"],
+          ["F2", "Add Local Voice Model"],
+          ["F3", "Model Training Wizard (Single / Batch)"],
+          ["F5", "Start / Stop Live Voice Conversion"],
+          ["F6", "Test Voice Recording"],
+          ["F7", "Start / Stop Output Audio Recording"]
+        ],
+        setupHeading: "Quick Setup & Start",
+        setupSteps: [
+          "Download the v1.0.2 Windows installer using the Download button above.",
+          "Launch the setup wizard, select your preferred installer language, and follow the spoken NVDA guidance.",
+          "Open the Accessible Voice Changer (NVDA) shortcut on your desktop.",
+          "Select your microphone, Line 1 (Virtual Audio Cable) output, and a voice model, then press F5 to start!"
+        ],
+        docsLinks: 'Full documentation: <a href="https://github.com/ali-ucel/erisilebilir-ses-degistirici/blob/main/readme_en.md">readme_en.md</a> | <a href="https://github.com/ali-ucel/erisilebilir-ses-degistirici/blob/main/readme_t%C3%BCrk%C3%A7e.md">readme_türkçe.md</a>',
+        disclaimer: "Users assume full responsibility for any audio generated or transformed using AI voice models.",
+        announced: "Page language switched to English."
+      }
+    };
+
+    function setLang(lang, announce = true) {
+      const t = I18N[lang] || I18N.en;
+      document.documentElement.lang = lang;
+      document.getElementById("btn-tr").setAttribute("aria-pressed", String(lang === "tr"));
+      document.getElementById("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+      document.getElementById("skip-link").textContent = t.skip;
+      document.getElementById("brand-name").textContent = t.brand;
+      document.getElementById("nav-features").textContent = t.navFeatures;
+      document.getElementById("nav-shortcuts").textContent = t.navShortcuts;
+      document.getElementById("nav-setup").textContent = t.navSetup;
+      document.getElementById("nav-github").textContent = t.navGithub;
+      document.getElementById("hero-badge").textContent = t.badge;
+      document.getElementById("hero-title").textContent = t.title;
+      document.getElementById("hero-lead").textContent = t.lead;
+      document.getElementById("btn-download").textContent = t.download;
+      document.getElementById("btn-repo").textContent = t.repo;
+      document.getElementById("btn-discuss").textContent = t.discuss;
+      document.getElementById("hero-meta").textContent = t.meta;
+      document.getElementById("features-heading").textContent = t.featuresHeading;
+      document.getElementById("shortcuts-heading").textContent = t.shortcutsHeading;
+      document.getElementById("th-key").textContent = t.thKey;
+      document.getElementById("th-action").textContent = t.thAction;
+      document.getElementById("setup-heading").textContent = t.setupHeading;
+      document.getElementById("docs-links").innerHTML = t.docsLinks;
+      document.getElementById("footer-disclaimer").textContent = t.disclaimer;
+
+      const cardsEl = document.getElementById("features-cards");
+      cardsEl.innerHTML = t.features.map(([h, p]) =>
+        `<article class="card"><h3>${h}</h3><p>${p}</p></article>`
+      ).join("");
+
+      const tbodyEl = document.getElementById("shortcuts-body");
+      tbodyEl.innerHTML = t.shortcuts.map(([k, a]) =>
+        `<tr><td><kbd>${k}</kbd></td><td>${a}</td></tr>`
+      ).join("");
+
+      const stepsEl = document.getElementById("setup-steps");
+      stepsEl.innerHTML = t.setupSteps.map(s => `<li>${s}</li>`).join("");
+
+      if (announce) {
+        document.getElementById("live-status").textContent = t.announced;
+      }
+    }
+
+    const userLang = (navigator.language || "en").toLowerCase().startsWith("tr") ? "tr" : "en";
+    setLang(userLang, false);
+  </script>
+</body>
+</html>

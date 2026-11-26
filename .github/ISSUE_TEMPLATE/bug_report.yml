@@ -1,0 +1,30 @@
+name: Hata Bildirimi / Bug Report
+description: Uygulamada karşılaştığınız bir hatayı veya erişilebilirlik sorununu bildirin.
+title: "[Hata/Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Sorunun Özeti / Problem Summary
+      description: Karşılaştığınız sorunu kısaca açıklayın.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Uygulama Sürümü / App Version
+      placeholder: "Örn: v1.0.2"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Sistem ve Ekran Okuyucu / System & Screen Reader
+      description: Windows sürümü, GPU/CPU ve kullandığınız ekran okuyucu (NVDA sürümü vb.).
+      placeholder: "Windows 11 64-bit, NVDA 2025.x, RTX 3060"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Tekrarlama Adımları / Steps to Reproduce
+      description: Sorunu adım adım nasıl oluşturabiliriz?

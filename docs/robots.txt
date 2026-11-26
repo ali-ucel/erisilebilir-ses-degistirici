@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ali-ucel.github.io/erisilebilir-ses-degistirici/sitemap.xml

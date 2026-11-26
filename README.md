@@ -1,7 +1,9 @@
 # Erişilebilir Ses Değiştirici (Accessible Voice Changer)
 
+![Accessible Voice Changer - NVDA Compatible AI Voice Converter](docs/assets/og-preview.jpg)
+
 > 🌐 **Dil Seçimi / Language Selection:**  
-> 🇹🇷 **[Türkçe Dokümantasyon (`readme_türkçe.md`)](readme_türkçe.md)** &nbsp;|&nbsp; 🇺🇸 **[English Documentation (`readme_en.md`)](readme_en.md)**
+> 🇹🇷 **[Türkçe Dokümantasyon (`readme_türkçe.md`)](readme_türkçe.md)** &nbsp;|&nbsp; 🇺🇸 **[English Documentation (`readme_en.md`)](readme_en.md)** &nbsp;|&nbsp; 🌍 **[Web Sitesi / Live Site](https://ali-ucel.github.io/erisilebilir-ses-degistirici/)**
 
 **Erişilebilir Ses Değiştirici**, görme engelli bireyler başta olmak üzere tüm kullanıcılar için tasarlanmış, **%100 NVDA ve ekran okuyucu uyumlu**, yapay zeka (RVC v2) destekli gerçek zamanlı ses dönüştürme yazılımıdır.  
 **Accessible Voice Changer** is an AI-powered (RVC v2) real-time voice conversion application offering full keyboard and screen reader (NVDA) compatibility for all users, especially individuals with visual impairments.

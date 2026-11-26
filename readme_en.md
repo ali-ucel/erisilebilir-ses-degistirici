@@ -1,6 +1,8 @@
-> 🌐 **[Türkçe Dokümantasyon (`readme_türkçe.md`)](readme_türkçe.md)** &nbsp;|&nbsp; 🏠 **[Home (`README.md`)](README.md)**
+> 🌐 **[Türkçe Dokümantasyon (`readme_türkçe.md`)](readme_türkçe.md)** &nbsp;|&nbsp; 🏠 **[Home (`README.md`)](README.md)** &nbsp;|&nbsp; 🌍 **[Live Website](https://ali-ucel.github.io/erisilebilir-ses-degistirici/)**
 
 # Accessible Voice Changer (v1.0.2)
+
+![Accessible Voice Changer - NVDA Compatible AI Voice Converter](docs/assets/og-preview.jpg)
 
 **Accessible Voice Changer (NVDA Compatible RVC Voice Converter):**  
 This application offers RVC (Retrieval-based Voice Conversion) artificial intelligence voice conversion technology with **100% keyboard and screen reader compatibility** for all users, especially individuals with visual impairments and those using screen readers such as NVDA.
